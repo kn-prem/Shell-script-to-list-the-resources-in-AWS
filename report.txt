@@ -1,0 +1,21 @@
++ echo 'print list of s3 buckets'
+print list of s3 buckets
++ aws s3 ls
++ echo 'list of ec2-instances'
+list of ec2-instances
++ aws ec2 describe-instances
++ jq '.Reservations[].Instances[].InstanceId'
+"i-010178dace0d00e92"
+"i-07592b85d5703c7d2"
++ echo 'list IAM users'
+list IAM users
++ aws iam list-users
+{
+    "Users": []
+}
++ echo 'list lambda functions'
+list lambda functions
++ aws lambda list-functions
+{
+    "Functions": []
+}
